@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="a96fcb91-c698-4279-b752-9cee336d9962" name="ActionPrimitives" linkedPackageId="b3317a3f-c73a-42c6-90da-ae016d90806d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="8c9da832-9f78-4fed-a910-dd88f8d7e2ef" name="ActionPrimitives" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c7e04262-a5a2-43d9-bf81-74dcc246bad6" />
+        <nodes>
+          <opaqueAction Id="92eaf760-bf9b-4559-a8b6-39b508ef3968" name="Генератор" isLeaf="false">
+            <elementDefinition Id="2ddfc33a-7929-44df-98de-e9d4cc880179" />
+          </opaqueAction>
+          <opaqueAction Id="7ff17186-a186-4361-a712-0171416ac662" name="Накопитель" isLeaf="false">
+            <elementDefinition Id="fdb60b23-074e-48ca-97a8-c02bf77f5969" />
+            <body>количество заявок
+текущее количество</body>
+          </opaqueAction>
+          <objectNode Id="1d633208-2d6b-4ef2-8a56-6173e21ccc67" name="Object1" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="cc59699b-25e7-4984-a519-c789a67238a1" />
+            <upperBound>
+              <literalInteger Id="0e84106e-c5bf-4e20-9bd1-63c7ecb62fee" name="2147483647" value="2147483647">
+                <elementDefinition Id="287e11b1-f5ec-4b26-91d2-177775faafe0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="b3317a3f-c73a-42c6-90da-ae016d90806d" name="ModelingProject">
+    <elementDefinition Id="3915a63f-434e-45cd-a45c-d5a6292502cd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3ba5139f-a9ed-4bee-b649-212cafd9750b">
+        <profileInstance Id="1b6a3cfe-b070-448c-9959-a9bb988f254d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="45ca26d2-10af-4809-9aa0-25b66a739c73">
+        <profileInstance Id="35d02aff-1b90-4d8a-976c-d2877335375b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

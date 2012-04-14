@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="3915a63f-434e-45cd-a45c-d5a6292502cd"
+  name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="0bec77bc-a0fc-4f5f-a13b-e6886d3f8932">
+      <body>Значит у каждого базового объекта должен быть связанный список объектов - свойств для отображения и редактирования
+</body>
+    </comment>
+    <comment
+      Id="6764ebd0-a185-42d2-bd28-7ad393eaac3c">
+      <body>если свойство это массив или коллекция</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c6fdf384-563a-4675-aaae-83cbd40bfe36"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1227d5a5-b174-44ee-8bbc-77b268b1804b"
+            name="type"
+            profile="StandardProfileL2" />
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="d9548f97-65ae-4459-a6bb-5984a1e36723">
+            <redefinableTemplateSignatureMoniker
+              Id="fe0e23b6-80af-4bfe-946f-9f7844200bbf"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="d88db663-36f3-41ce-95bb-876c8ef42d1c">
+                  <actuals>
+                    <classMoniker
+                      Id="c6fdf384-563a-4675-aaae-83cbd40bfe36"
+                      LastKnownName="Class1"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="a187409a-0c12-407f-9a02-93debc96bd5e"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="fe0e23b6-80af-4bfe-946f-9f7844200bbf"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="a187409a-0c12-407f-9a02-93debc96bd5e">
+                <ownedParameterableElement>
+                  <class
+                    Id="4f3c5298-e4c8-4e05-854a-7dca40794818"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+                <nonOwnedDefault>
+                  <classMoniker
+                    Id="c6fdf384-563a-4675-aaae-83cbd40bfe36"
+                    LastKnownName="Class1"
+                    LastKnownLocation="ModelingProject.uml" />
+                </nonOwnedDefault>
+                <constrainingClassifier>
+                  <classMoniker
+                    Id="c6fdf384-563a-4675-aaae-83cbd40bfe36"
+                    LastKnownName="Class1"
+                    LastKnownLocation="ModelingProject.uml" />
+                </constrainingClassifier>
+                <defaultClassifier>
+                  <classMoniker
+                    Id="c6fdf384-563a-4675-aaae-83cbd40bfe36"
+                    LastKnownName="Class1"
+                    LastKnownLocation="ModelingProject.uml" />
+                </defaultClassifier>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="36a2ac8b-16b0-47ba-a84b-76a669a49939"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2329ade4-3426-439e-ae1f-b3e92d57127b"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="8d499ffd-d9d1-475d-a2d4-8321587354b8"
+        name="Create"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="1bcae5d7-3245-466f-982c-2acc850ec37e"
+            name="Опредиляет тип и имя"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ab25a478-d6fb-4dad-8981-16a46f0f2279"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="98d12ee5-6bce-491e-8fa8-29ba5fb88865"
+                  LastKnownName="Генерирует контролы"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="98d12ee5-6bce-491e-8fa8-29ba5fb88865"
+            name="Генерирует контролы"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0f75d3fb-2ba2-4be4-a387-0189c42c8127"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="43cf410a-71a1-4a1c-b7be-65f8e6e00498"
+                  LastKnownName="textblock =  name"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="5865a88b-aacd-44c6-a3c8-550999ceb193"
+            name="Получает новое свойство"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5543ff90-ed01-4890-8c81-d7a8f358057d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1bcae5d7-3245-466f-982c-2acc850ec37e"
+                  LastKnownName="Опредиляет тип и имя"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <objectNode
+            Id="7a86a262-8368-42b5-b035-57c2fbaa8326"
+            name="BaseObject"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="00d985e5-60d1-48da-a805-1cbc00accbcf"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <sendSignalActionMoniker
+                  Id="5865a88b-aacd-44c6-a3c8-550999ceb193"
+                  LastKnownName="Получает новое свойство"
+                  LastKnownLocation="ModelingProject.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="bedef7f6-8934-4d8f-98fb-6c0dc2052c0b"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="202ef6db-9f4a-4ca1-b228-d2299e899b26"
+            name="Определяет предпочтения прорисовки множественных свойств"
+            isLeaf="false" />
+          <decisionNode
+            Id="939abc8f-c87c-4530-9b92-fcecd7b48995"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d15c1c56-a14f-44b3-8049-698cdef75de4"
+                guard="да"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="202ef6db-9f4a-4ca1-b228-d2299e899b26"
+                  LastKnownName="Определяет предпочтения прорисовки множественных свойств"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4d1b2004-4995-4291-b18c-be1cbcfe1a0d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0de8386d-397f-493e-a319-eb06380d1b88"
+                  LastKnownName="Определяет формат и добавляет textBox"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="0de8386d-397f-493e-a319-eb06380d1b88"
+            name="Определяет формат и добавляет textBox"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="70e6133e-58e8-482a-9724-e6b03431135c"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="10cb8497-51a1-4b14-9a1d-4e90e2d266a1"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="43cf410a-71a1-4a1c-b7be-65f8e6e00498"
+            name="textblock =  name"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d707d8b8-a15c-44d3-afd4-4d70cf3585ad"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="939abc8f-c87c-4530-9b92-fcecd7b48995"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="10cb8497-51a1-4b14-9a1d-4e90e2d266a1"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <initialNode
+            Id="40e91665-24be-40f9-b8d7-aba0f25eea0d"
+            name="Initial1"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="0bf882e0-b145-46e2-a99d-4f1aff28711e"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="7a86a262-8368-42b5-b035-57c2fbaa8326"
+                  LastKnownName="BaseObject"
+                  LastKnownLocation="ModelingProject.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="3334e884-4aa5-4246-bf8b-178ff15d4c63"
+        name="Method"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="65474853-4e10-4da9-84aa-5ee0d1b063ff"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
+          <lifeline
+            Id="7338b571-4a50-4ab5-9453-310d7d6dcdf9"
+            name="Lifeline2"
+            isActor="false"
+            lifelineDisplayName="Lifeline2" />
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="c7e04262-a5a2-43d9-bf81-74dcc246bad6"
+        name="ActionPrimitives"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="2ddfc33a-7929-44df-98de-e9d4cc880179"
+            name="Генератор"
+            isLeaf="false" />
+          <opaqueAction
+            Id="fdb60b23-074e-48ca-97a8-c02bf77f5969"
+            name="Накопитель"
+            isLeaf="false">
+            <body>количество заявок
+текущее количество</body>
+          </opaqueAction>
+          <objectNode
+            Id="cc59699b-25e7-4984-a519-c789a67238a1"
+            name="Object1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="287e11b1-f5ec-4b26-91d2-177775faafe0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

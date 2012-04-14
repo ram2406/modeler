@@ -1,0 +1,50 @@
+﻿<Window x:Class="Modeler2WPF.Windows.FormulaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Формулы" Height="367" Width="546" xmlns:my="clr-namespace:Modeler2WPF.Controls">
+    <Grid Background="WhiteSmoke" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="36*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="77*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="14*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*" />
+            <ColumnDefinition Width="148*" />
+            <ColumnDefinition Width="12*" />
+            <ColumnDefinition Width="101*" />
+            <ColumnDefinition Width="74*" />
+            <ColumnDefinition Width="77*" />
+            <ColumnDefinition Width="45*" />
+            <ColumnDefinition Width="44*" />
+            <ColumnDefinition Width="12*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="3"  HorizontalAlignment="Stretch" Name="textBlock1" Text="Выражение :" VerticalAlignment="Stretch" Grid.Row="2" Margin="3,3,15,3" />
+        <TextBox Grid.Column="4" Margin="6,3" HorizontalAlignment="Stretch" Name="textBox_expression" VerticalAlignment="Stretch" Grid.ColumnSpan="3" Grid.Row="2"  />
+        <ListBox Grid.RowSpan="7"  Margin="3" HorizontalAlignment="Stretch" Name="listBox1" VerticalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" />
+        <Button Content="Удалить" Margin="3,42,15,3" HorizontalAlignment="Stretch"  Name="button4" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="6" Click="button4_Click" />
+        <TextBox Grid.Column="4" Margin="6,3" HorizontalAlignment="Stretch"  Name="textBox_name" VerticalAlignment="Stretch"  Grid.Row="1" Grid.ColumnSpan="3" />
+        <TextBlock HorizontalAlignment="Stretch" Margin="3,3,15,3" Name="textBlock2" Text="Переменные :" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="3" />
+        <TextBlock HorizontalAlignment="Stretch" Margin="3,4,15,0" Name="textBlock4" Text="Вызов :" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="4" />
+        <Button Content="Создать" HorizontalAlignment="Stretch" Margin="3,3,15,3" Name="button5" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="7" Click="button5_Click" />
+        <TextBlock HorizontalAlignment="Stretch" Margin="3,3,0,3" Name="textBlock3" Text="Наименование :" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="1" />
+        <TextBox HorizontalAlignment="Stretch" Margin="6,3" Name="textBox_variables" VerticalAlignment="Stretch" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="3" />
+        <TextBox HorizontalAlignment="Stretch" Margin="6,3" Name="textBox_exec" VerticalAlignment="Stretch" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="4"  />
+        <TextBox HorizontalAlignment="Stretch" Margin="6,3,3,3" Name="textBox_test" VerticalAlignment="Stretch" Grid.Column="4" 
+                 Grid.ColumnSpan="2" Grid.Row="5"  />
+        <Button Content="Выполнить" HorizontalAlignment="Stretch" Margin="3,3,15,3" Name="button1" VerticalAlignment="Stretch" 
+                Grid.Column="3" Grid.Row="5" Click="button1_Click" />
+        <ScrollViewer Grid.Column="6" Grid.Row="5" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+        <TextBlock   
+                     HorizontalAlignment="Right"  Name="textBlock_res" Text="" VerticalAlignment="Center" Margin="0,0,10,0"  />
+        </ScrollViewer>
+        <TextBlock Grid.Column="3" Grid.Row="6" Height="23" HorizontalAlignment="Left" Margin="3,0,0,0" Name="textBlock5" Text="" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="288" />
+        <Button Content="Сохранить в файл" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" Margin="56,3,0,3" Name="button2" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="7" Click="button2_Click" />
+    </Grid>
+</Window>

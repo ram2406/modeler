@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="ff7c3586-9bdb-48f3-b819-32471a5b8716" name="UMLClassDiagram1" linkedPackageId="2a41c442-5177-4607-b1af-256092043f6a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ce06a9a0-b645-4fa5-8caa-f8cb4a2efa52">
+      <profileInstance Id="092279df-eecf-4bdd-83d9-c212d0a85f4b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e4a79532-f16b-4e94-9246-26e72db2867f">
+      <profileInstance Id="3e7862c2-280d-4619-8a4b-5faee8e0d41a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d5a9b11b-3745-404f-9d45-f77a5fef8d49" name="Class1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="475bdd92-0d08-4834-9429-176e863b4f38" name="type" profile="StandardProfileL2">
+            <elementDefinition Id="1227d5a5-b174-44ee-8bbc-77b268b1804b" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="c6fdf384-563a-4675-aaae-83cbd40bfe36" />
+        <signatures>
+          <templateBinding Id="063be058-039c-4421-9683-f02962d2f3ce">
+            <templateSignatureProxyMoniker Id="303a0eaf-4f5e-41ef-9004-26859d5122da" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="412c985e-fc28-44e6-bf71-8cc8ef2259b5">
+                  <elementDefinition Id="d88db663-36f3-41ce-95bb-876c8ef42d1c" />
+                  <actuals>
+                    <referencedTypeMoniker Id="2eb2902d-16a7-469d-a615-db912652007f" LastKnownName="Class1" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="677ea609-3aa7-4d6c-a3b2-668511b97c35" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d9548f97-65ae-4459-a6bb-5984a1e36723" />
+          </templateBinding>
+        </signatures>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="e6d56c3c-5a34-4042-851e-ce3e5ef91ceb" parameters="" isLeaf="false">
+            <elementDefinition Id="fe0e23b6-80af-4bfe-946f-9f7844200bbf" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="2854a9a7-285e-422d-9493-46164f09280d">
+                <elementDefinition Id="a187409a-0c12-407f-9a02-93debc96bd5e" />
+                <ownedParameterableElement>
+                  <class Id="67658f2b-fe17-4df9-bf5f-09ced13a75eb" name="T" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="4f3c5298-e4c8-4e05-854a-7dca40794818" />
+                  </class>
+                </ownedParameterableElement>
+                <nonOwnedDefault>
+                  <referencedTypeMoniker Id="5023644e-b6f9-46aa-9f5e-116d543b9065" LastKnownName="Class1" />
+                </nonOwnedDefault>
+                <constrainingClassifier>
+                  <referencedTypeMoniker Id="5023644e-b6f9-46aa-9f5e-116d543b9065" LastKnownName="Class1" />
+                </constrainingClassifier>
+                <defaultClassifier>
+                  <classMoniker Id="d5a9b11b-3745-404f-9d45-f77a5fef8d49" LastKnownName="Class1" />
+                </defaultClassifier>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property Id="4d53b267-ce83-49db-9fd5-d8b767b1922b" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36a2ac8b-16b0-47ba-a84b-76a669a49939" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7f22a03f-7662-4d97-ae51-1842cce36f44" name="Operation1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2329ade4-3426-439e-ae1f-b3e92d57127b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5023644e-b6f9-46aa-9f5e-116d543b9065" name="Class1" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Class1">
+        <elementDefinition Id="c6fdf384-563a-4675-aaae-83cbd40bfe36" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2eb2902d-16a7-469d-a615-db912652007f" name="Class1" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::Class1">
+        <elementDefinition Id="c6fdf384-563a-4675-aaae-83cbd40bfe36" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <templateSignatureProxies>
+    <templateSignatureProxy Id="303a0eaf-4f5e-41ef-9004-26859d5122da" parameters="" isLeaf="false" signatureId="fe0e23b6-80af-4bfe-946f-9f7844200bbf">
+      <elementDefinition Id="fe0e23b6-80af-4bfe-946f-9f7844200bbf" />
+      <ownedParameters>
+        <templateParameterProxy Id="677ea609-3aa7-4d6c-a3b2-668511b97c35" parameterId="a187409a-0c12-407f-9a02-93debc96bd5e">
+          <elementDefinition Id="a187409a-0c12-407f-9a02-93debc96bd5e" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+  </templateSignatureProxies>
+  <package Id="2a41c442-5177-4607-b1af-256092043f6a" name="ModelingProject">
+    <elementDefinition Id="3915a63f-434e-45cd-a45c-d5a6292502cd" />
+  </package>
+</logicalClassDesignerModel>

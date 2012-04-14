@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a1463c01-14ef-4255-ae4f-373a66a012e1" name="Create" linkedPackageId="92e75842-dd30-4972-ad05-d77f2a4c628f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b27a4a1e-3bf4-4266-91ce-2357578444cd">
+      <elementDefinition Id="0bec77bc-a0fc-4f5f-a13b-e6886d3f8932" />
+      <body>Значит у каждого базового объекта должен быть связанный список объектов - свойств для отображения и редактирования
+</body>
+    </comment>
+    <comment Id="c8e3c8fa-c658-45d6-9c01-cae8cb5b6000">
+      <elementDefinition Id="6764ebd0-a185-42d2-bd28-7ad393eaac3c" />
+      <body>если свойство это массив или коллекция</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="335566bc-f7a7-4b2f-9309-83c950639f9b">
+      <profileInstance Id="01a06ff0-498b-42e4-bde1-9510b064d961" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7fc35dfa-4894-4f1d-8587-598bb4906634">
+      <profileInstance Id="8e9cc676-af79-4a87-b084-9c0e863a99ad" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="59e696e0-2fa8-4ed6-8dfa-df3ee3f711ad" name="Create" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="8d499ffd-d9d1-475d-a2d4-8321587354b8" />
+        <nodes>
+          <opaqueAction Id="170f1e9d-2b2a-455e-a550-263245ca9cfa" name="Опредиляет тип и имя" isLeaf="false">
+            <elementDefinition Id="1bcae5d7-3245-466f-982c-2acc850ec37e" />
+            <flowNodeTargets>
+              <controlFlow Id="58fdaeda-531e-4348-9b28-4493c3db95fd" isLeaf="false">
+                <opaqueActionMoniker Id="81aaad40-018f-408e-8472-9982d455ddd9" LastKnownName="Генерирует контролы" />
+                <elementDefinition Id="ab25a478-d6fb-4dad-8981-16a46f0f2279" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="81aaad40-018f-408e-8472-9982d455ddd9" name="Генерирует контролы" isLeaf="false">
+            <elementDefinition Id="98d12ee5-6bce-491e-8fa8-29ba5fb88865" />
+            <flowNodeTargets>
+              <controlFlow Id="896a84be-be6c-4735-8255-b3c8ca0230b0" isLeaf="false">
+                <opaqueActionMoniker Id="056d388d-601d-4dc8-b604-37158d22df40" LastKnownName="textblock =  name" />
+                <elementDefinition Id="0f75d3fb-2ba2-4be4-a387-0189c42c8127" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="1906759e-b241-42e4-a211-f2a152498dd5" name="Получает новое свойство" isLeaf="false">
+            <elementDefinition Id="5865a88b-aacd-44c6-a3c8-550999ceb193" />
+            <flowNodeTargets>
+              <controlFlow Id="3d70b993-b549-423f-9cda-92ea413a629f" isLeaf="false">
+                <opaqueActionMoniker Id="170f1e9d-2b2a-455e-a550-263245ca9cfa" LastKnownName="Опредиляет тип и имя" />
+                <elementDefinition Id="5543ff90-ed01-4890-8c81-d7a8f358057d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <objectNode Id="54b6d1be-0f75-40d7-bdf2-b5d428b4fcaa" name="BaseObject" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7a86a262-8368-42b5-b035-57c2fbaa8326" />
+            <objectFlowTargets>
+              <objectFlow Id="5307f0ff-93e4-4b9f-a727-de164a4d5410" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <sendSignalActionMoniker Id="1906759e-b241-42e4-a211-f2a152498dd5" LastKnownName="Получает новое свойство" />
+                <elementDefinition Id="00d985e5-60d1-48da-a805-1cbc00accbcf" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="1a56e883-7009-4129-862a-ac76cdce34c6" name="2147483647" value="2147483647">
+                <elementDefinition Id="bedef7f6-8934-4d8f-98fb-6c0dc2052c0b" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="bf670d23-ad02-4660-8540-fe9f6cdf0f53" name="Определяет предпочтения прорисовки множественных свойств" isLeaf="false">
+            <elementDefinition Id="202ef6db-9f4a-4ca1-b228-d2299e899b26" />
+          </opaqueAction>
+          <decisionNode Id="0d689626-7c99-4f5f-b264-404472f0aea6" name="Decision1" isLeaf="false">
+            <elementDefinition Id="939abc8f-c87c-4530-9b92-fcecd7b48995" />
+            <flowNodeTargets>
+              <controlFlow Id="d72b0290-70e4-4a38-90bc-6ed3be248fb3" guard="да" isLeaf="false">
+                <opaqueActionMoniker Id="bf670d23-ad02-4660-8540-fe9f6cdf0f53" LastKnownName="Определяет предпочтения прорисовки множественных свойств" />
+                <elementDefinition Id="d15c1c56-a14f-44b3-8049-698cdef75de4" />
+              </controlFlow>
+              <controlFlow Id="2930237d-46b5-4b22-ba3b-143f3e1f9536" isLeaf="false">
+                <opaqueActionMoniker Id="fcb4b048-fd4b-4887-a34a-3d2ba3327fa8" LastKnownName="Определяет формат и добавляет textBox" />
+                <elementDefinition Id="4d1b2004-4995-4291-b18c-be1cbcfe1a0d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="fcb4b048-fd4b-4887-a34a-3d2ba3327fa8" name="Определяет формат и добавляет textBox" isLeaf="false">
+            <elementDefinition Id="0de8386d-397f-493e-a319-eb06380d1b88" />
+            <flowNodeTargets>
+              <controlFlow Id="6512c755-58e7-4a3d-b5b0-a7a2b0a6b029" isLeaf="false">
+                <activityFinalNodeMoniker Id="6ae12e21-fd9e-4d78-85af-7ea3287d7d8f" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="70e6133e-58e8-482a-9724-e6b03431135c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="056d388d-601d-4dc8-b604-37158d22df40" name="textblock =  name" isLeaf="false">
+            <elementDefinition Id="43cf410a-71a1-4a1c-b7be-65f8e6e00498" />
+            <flowNodeTargets>
+              <controlFlow Id="f19fe0b0-a98b-4e84-8626-e341fbf3b2e5" isLeaf="false">
+                <decisionNodeMoniker Id="0d689626-7c99-4f5f-b264-404472f0aea6" LastKnownName="Decision1" />
+                <elementDefinition Id="d707d8b8-a15c-44d3-afd4-4d70cf3585ad" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="6ae12e21-fd9e-4d78-85af-7ea3287d7d8f" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="10cb8497-51a1-4b14-9a1d-4e90e2d266a1" />
+          </activityFinalNode>
+          <initialNode Id="08defaac-48f4-4e8b-87c3-af35c7841ee6" name="Initial1" isLeaf="false">
+            <elementDefinition Id="40e91665-24be-40f9-b8d7-aba0f25eea0d" />
+            <objectFlowTargets>
+              <objectFlow Id="c25d4cf2-4558-425b-bfcc-8254c3430b5e" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="54b6d1be-0f75-40d7-bdf2-b5d428b4fcaa" LastKnownName="BaseObject" />
+                <elementDefinition Id="0bf882e0-b145-46e2-a99d-4f1aff28711e" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="92e75842-dd30-4972-ad05-d77f2a4c628f" name="ModelingProject">
+    <elementDefinition Id="3915a63f-434e-45cd-a45c-d5a6292502cd" />
+  </package>
+</activityRootModel>

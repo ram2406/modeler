@@ -1,0 +1,25 @@
+﻿<Window x:Class="Modeler2WPF.Windows.CreateFileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новый проект" Height="225" Width="320" Icon="/Modeler2WPF;component/1326051165_3d_modelling.ico" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="20*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96*" />
+            <ColumnDefinition Width="182*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Создать" Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="107,48,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" Grid.RowSpan="2" />
+        <TextBlock  HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Наименование" VerticalAlignment="Top" />
+        <TextBlock  HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock2" Text="Имя пользователя" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBlock  HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock3" Text="Путь к файлу" VerticalAlignment="Top" Grid.Row="2" />
+        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="12,9,0,0" Name="textBox1" VerticalAlignment="Top" Width="158" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,9,0,0" Name="textBox2" VerticalAlignment="Top" Width="158" Grid.Column="1" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,9,0,0" Name="textBox3" VerticalAlignment="Top" Width="89" Grid.Column="1" Grid.Row="2" />
+        <Button Content="Обзор" Height="23" HorizontalAlignment="Left" Margin="107,9,0,0" Name="button2" VerticalAlignment="Top" Width="75" Grid.Column="1" Grid.Row="2" Click="button2_Click" />
+    </Grid>
+</Window>

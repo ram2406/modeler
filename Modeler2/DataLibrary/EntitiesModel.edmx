@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EntitiesDataBaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EntitiesDataBaseModelStoreContainer">
+          <EntitySet Name="KindOfParameter" EntityType="EntitiesDataBaseModel.Store.KindOfParameter" store:Type="Tables" />
+          <EntitySet Name="KindOfPrimitive" EntityType="EntitiesDataBaseModel.Store.KindOfPrimitive" store:Type="Tables" />
+          <EntitySet Name="Link" EntityType="EntitiesDataBaseModel.Store.Link" store:Type="Tables" />
+          <EntitySet Name="Parameter" EntityType="EntitiesDataBaseModel.Store.Parameter" store:Type="Tables" />
+          <EntitySet Name="Primitive" EntityType="EntitiesDataBaseModel.Store.Primitive" store:Type="Tables" />
+          <AssociationSet Name="_KindOfParameter_KindOfPrimitive" Association="EntitiesDataBaseModel.Store._KindOfParameter_KindOfPrimitive">
+            <End Role="KindOfPrimitive" EntitySet="KindOfPrimitive" />
+            <End Role="KindOfParameter" EntitySet="KindOfParameter" />
+          </AssociationSet>
+          <AssociationSet Name="_Parameter_KindOfParameter" Association="EntitiesDataBaseModel.Store._Parameter_KindOfParameter">
+            <End Role="KindOfParameter" EntitySet="KindOfParameter" />
+            <End Role="Parameter" EntitySet="Parameter" />
+          </AssociationSet>
+          <AssociationSet Name="_Parameter_Primitive" Association="EntitiesDataBaseModel.Store._Parameter_Primitive">
+            <End Role="Primitive" EntitySet="Primitive" />
+            <End Role="Parameter" EntitySet="Parameter" />
+          </AssociationSet>
+          <AssociationSet Name="_Primitive_KindOfPrimitive" Association="EntitiesDataBaseModel.Store._Primitive_KindOfPrimitive">
+            <End Role="KindOfPrimitive" EntitySet="KindOfPrimitive" />
+            <End Role="Primitive" EntitySet="Primitive" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="KindOfParameter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="KindOfPrimitiveId" Type="int" />
+        </EntityType>
+        <EntityType Name="KindOfPrimitive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Link">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PrimitiveId_start" Type="int" />
+          <Property Name="PrimitiveId_end" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KindOfParameterId" Type="int" />
+          <Property Name="Value" Type="numeric" Precision="5" />
+          <Property Name="PrimitiveId" Type="int" />
+        </EntityType>
+        <EntityType Name="Primitive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="KindOfParameterId" Type="int" />
+        </EntityType>
+        <Association Name="_KindOfParameter_KindOfPrimitive">
+          <End Role="KindOfPrimitive" Type="EntitiesDataBaseModel.Store.KindOfPrimitive" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="KindOfParameter" Type="EntitiesDataBaseModel.Store.KindOfParameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfPrimitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KindOfParameter">
+              <PropertyRef Name="KindOfPrimitiveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="_Parameter_KindOfParameter">
+          <End Role="KindOfParameter" Type="EntitiesDataBaseModel.Store.KindOfParameter" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Parameter" Type="EntitiesDataBaseModel.Store.Parameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfParameter">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parameter">
+              <PropertyRef Name="KindOfParameterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="_Parameter_Primitive">
+          <End Role="Primitive" Type="EntitiesDataBaseModel.Store.Primitive" Multiplicity="0..1" />
+          <End Role="Parameter" Type="EntitiesDataBaseModel.Store.Parameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Primitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parameter">
+              <PropertyRef Name="PrimitiveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="_Primitive_KindOfPrimitive">
+          <End Role="KindOfPrimitive" Type="EntitiesDataBaseModel.Store.KindOfPrimitive" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Primitive" Type="EntitiesDataBaseModel.Store.Primitive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfPrimitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Primitive">
+              <PropertyRef Name="KindOfParameterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EntitiesDataBaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntitiesDataBaseEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="KindOfParameter" EntityType="EntitiesDataBaseModel.KindOfParameter" />
+          <EntitySet Name="KindOfPrimitive" EntityType="EntitiesDataBaseModel.KindOfPrimitive" />
+          <EntitySet Name="Link" EntityType="EntitiesDataBaseModel.Link" />
+          <EntitySet Name="Parameter" EntityType="EntitiesDataBaseModel.Parameter" />
+          <EntitySet Name="Primitive" EntityType="EntitiesDataBaseModel.Primitive" />
+          <AssociationSet Name="C_KindOfParameter_KindOfPrimitive" Association="EntitiesDataBaseModel.C_KindOfParameter_KindOfPrimitive">
+            <End Role="KindOfPrimitive" EntitySet="KindOfPrimitive" />
+            <End Role="KindOfParameter" EntitySet="KindOfParameter" />
+          </AssociationSet>
+          <AssociationSet Name="C_Parameter_KindOfParameter" Association="EntitiesDataBaseModel.C_Parameter_KindOfParameter">
+            <End Role="KindOfParameter" EntitySet="KindOfParameter" />
+            <End Role="Parameter" EntitySet="Parameter" />
+          </AssociationSet>
+          <AssociationSet Name="C_Primitive_KindOfPrimitive" Association="EntitiesDataBaseModel.C_Primitive_KindOfPrimitive">
+            <End Role="KindOfPrimitive" EntitySet="KindOfPrimitive" />
+            <End Role="Primitive" EntitySet="Primitive" />
+          </AssociationSet>
+          <AssociationSet Name="C_Parameter_Primitive" Association="EntitiesDataBaseModel.C_Parameter_Primitive">
+            <End Role="Primitive" EntitySet="Primitive" />
+            <End Role="Parameter" EntitySet="Parameter" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="KindOfParameter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="KindOfPrimitiveId" />
+          <NavigationProperty Name="KindOfPrimitive" Relationship="EntitiesDataBaseModel.C_KindOfParameter_KindOfPrimitive" FromRole="KindOfParameter" ToRole="KindOfPrimitive" />
+          <NavigationProperty Name="Parameter" Relationship="EntitiesDataBaseModel.C_Parameter_KindOfParameter" FromRole="KindOfParameter" ToRole="Parameter" />
+        </EntityType>
+        <EntityType Name="KindOfPrimitive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="KindOfParameter" Relationship="EntitiesDataBaseModel.C_KindOfParameter_KindOfPrimitive" FromRole="KindOfPrimitive" ToRole="KindOfParameter" />
+          <NavigationProperty Name="Primitive" Relationship="EntitiesDataBaseModel.C_Primitive_KindOfPrimitive" FromRole="KindOfPrimitive" ToRole="Primitive" />
+        </EntityType>
+        <EntityType Name="Link">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PrimitiveId_start" />
+          <Property Type="Int32" Name="PrimitiveId_end" />
+          <Property Type="String" Name="Name" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="KindOfParameterId" />
+          <Property Type="Decimal" Name="Value" Precision="5" Scale="0" />
+          <Property Type="Int32" Name="PrimitiveId" />
+          <NavigationProperty Name="KindOfParameter" Relationship="EntitiesDataBaseModel.C_Parameter_KindOfParameter" FromRole="Parameter" ToRole="KindOfParameter" />
+          <NavigationProperty Name="Primitive" Relationship="EntitiesDataBaseModel.C_Parameter_Primitive" FromRole="Parameter" ToRole="Primitive" />
+        </EntityType>
+        <EntityType Name="Primitive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="KindOfParameterId" />
+          <NavigationProperty Name="KindOfPrimitive" Relationship="EntitiesDataBaseModel.C_Primitive_KindOfPrimitive" FromRole="Primitive" ToRole="KindOfPrimitive" />
+          <NavigationProperty Name="Parameter" Relationship="EntitiesDataBaseModel.C_Parameter_Primitive" FromRole="Primitive" ToRole="Parameter" />
+        </EntityType>
+        <Association Name="C_KindOfParameter_KindOfPrimitive">
+          <End Type="EntitiesDataBaseModel.KindOfPrimitive" Role="KindOfPrimitive" Multiplicity="0..1" />
+          <End Type="EntitiesDataBaseModel.KindOfParameter" Role="KindOfParameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfPrimitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KindOfParameter">
+              <PropertyRef Name="KindOfPrimitiveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_Parameter_KindOfParameter">
+          <End Type="EntitiesDataBaseModel.KindOfParameter" Role="KindOfParameter" Multiplicity="0..1" />
+          <End Type="EntitiesDataBaseModel.Parameter" Role="Parameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfParameter">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parameter">
+              <PropertyRef Name="KindOfParameterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_Primitive_KindOfPrimitive">
+          <End Type="EntitiesDataBaseModel.KindOfPrimitive" Role="KindOfPrimitive" Multiplicity="0..1" />
+          <End Type="EntitiesDataBaseModel.Primitive" Role="Primitive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KindOfPrimitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Primitive">
+              <PropertyRef Name="KindOfParameterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_Parameter_Primitive">
+          <End Type="EntitiesDataBaseModel.Primitive" Role="Primitive" Multiplicity="0..1" />
+          <End Type="EntitiesDataBaseModel.Parameter" Role="Parameter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Primitive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parameter">
+              <PropertyRef Name="PrimitiveId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntitiesDataBaseModelStoreContainer" CdmEntityContainer="EntitiesDataBaseEntities">
+          <EntitySetMapping Name="KindOfParameter">
+            <EntityTypeMapping TypeName="EntitiesDataBaseModel.KindOfParameter">
+              <MappingFragment StoreEntitySet="KindOfParameter">
+                <ScalarProperty Name="KindOfPrimitiveId" ColumnName="KindOfPrimitiveId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KindOfPrimitive">
+            <EntityTypeMapping TypeName="EntitiesDataBaseModel.KindOfPrimitive">
+              <MappingFragment StoreEntitySet="KindOfPrimitive">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Link">
+            <EntityTypeMapping TypeName="EntitiesDataBaseModel.Link">
+              <MappingFragment StoreEntitySet="Link">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PrimitiveId_end" ColumnName="PrimitiveId_end" />
+                <ScalarProperty Name="PrimitiveId_start" ColumnName="PrimitiveId_start" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parameter">
+            <EntityTypeMapping TypeName="EntitiesDataBaseModel.Parameter">
+              <MappingFragment StoreEntitySet="Parameter">
+                <ScalarProperty Name="PrimitiveId" ColumnName="PrimitiveId" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="KindOfParameterId" ColumnName="KindOfParameterId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Primitive">
+            <EntityTypeMapping TypeName="EntitiesDataBaseModel.Primitive">
+              <MappingFragment StoreEntitySet="Primitive">
+                <ScalarProperty Name="KindOfParameterId" ColumnName="KindOfParameterId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" >
+        <EntityTypeShape EntityType="EntitiesDataBaseModel.KindOfParameter" Width="1.5" PointX="3" PointY="1.125" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="EntitiesDataBaseModel.KindOfPrimitive" Width="1.5" PointX="0.75" PointY="2.625" Height="1.9802864583333357" />
+        <EntityTypeShape EntityType="EntitiesDataBaseModel.Link" Width="1.5" PointX="5.75" PointY="5.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="EntitiesDataBaseModel.Parameter" Width="1.5" PointX="5.25" PointY="2.5" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="EntitiesDataBaseModel.Primitive" Width="1.5" PointX="3" PointY="4" Height="2.172587890624996" />
+        <AssociationConnector Association="EntitiesDataBaseModel.C_KindOfParameter_KindOfPrimitive" >
+          <ConnectorPoint PointX="2.25" PointY="2.9612939453125" />
+          <ConnectorPoint PointX="3" PointY="2.9612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="EntitiesDataBaseModel.C_Parameter_KindOfParameter" >
+          <ConnectorPoint PointX="4.5" PointY="2.8987939453125" />
+          <ConnectorPoint PointX="5.25" PointY="2.8987939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="EntitiesDataBaseModel.C_Primitive_KindOfPrimitive" >
+          <ConnectorPoint PointX="2.25" PointY="4.3026432291666676" />
+          <ConnectorPoint PointX="3" PointY="4.3026432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="EntitiesDataBaseModel.C_Parameter_Primitive" >
+          <ConnectorPoint PointX="4.5" PointY="4.336293945312498" />
+          <ConnectorPoint PointX="5.25" PointY="4.336293945312498" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

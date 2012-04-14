@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="0051aa75-5120-435f-8086-9fdf610efb42" name="Method" linkedPackageId="caf7ace4-a688-4665-837f-fe705ec891d6" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d8341d4d-cb31-41d9-912f-f63e6803a70e">
+      <profileInstance Id="94bec75f-734e-413f-8a2c-268ed3cff5b7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="aed947ff-3544-4736-a5da-bcb8c69e52ed">
+      <profileInstance Id="506e4394-f099-4868-9f5c-9a66da13145c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="7cdbae30-53ae-48e9-b728-80579e5a07c1" name="Method" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="3334e884-4aa5-4246-bf8b-178ff15d4c63" />
+        <lifelines>
+          <lifeline Id="f325807d-95ab-4b09-b1e9-2896126bc805" name="Lifeline1" isActor="false" lifelineDisplayName="Lifeline1">
+            <elementDefinition Id="65474853-4e10-4da9-84aa-5ee0d1b063ff" />
+          </lifeline>
+          <lifeline Id="6448b993-327f-4cc8-9706-8b741f042a09" name="Lifeline2" isActor="false" lifelineDisplayName="Lifeline2">
+            <elementDefinition Id="7338b571-4a50-4ab5-9453-310d7d6dcdf9" />
+          </lifeline>
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="caf7ace4-a688-4665-837f-fe705ec891d6" name="ModelingProject">
+    <elementDefinition Id="3915a63f-434e-45cd-a45c-d5a6292502cd" />
+  </package>
+</SequenceDesignerModel>
