@@ -24,6 +24,7 @@ namespace MainLogic
             Message = string.Empty;
             History = new List<string>(10);
         }
+		////ссссс
     }
 
 }
